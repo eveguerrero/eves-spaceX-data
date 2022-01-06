@@ -128,4 +128,6 @@ input[type=text]:invalid {
 
 .likes{
     color: white;
+    align-items: center;
+    background-color: red;
 }
