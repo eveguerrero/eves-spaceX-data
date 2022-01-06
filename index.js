@@ -15,6 +15,7 @@ function renderFetch() {
 
         commentEvent()
         
+        addComment()
         
     })
 }
@@ -65,7 +66,7 @@ function displayLaunch(launch) {
     launchInfo.appendChild(date_local)
 
     const video = document.createElement('div');
-    video.innerHTML = '<iframe width="450" height="250" src="//www.youtube.com/embed/' + launch.links.youtube_id + '" frameborder="0" allowfullscreen></iframe>'
+    video.innerHTML = '<iframe width="400" height="250" src="//www.youtube.com/embed/' + launch.links.youtube_id + '" frameborder="0" allowfullscreen></iframe>'
     // video.width = 500
     // const srcElement = document.createElement('source')
     // srcElement.src = `${launch.links.webcast}`
@@ -121,7 +122,7 @@ function addComment() {
     const commentContainer = document.getElementById('allComments');
     const commentInput = document.querySelector('#comment')
     const newCommentDiv = document.createElement('div')
-
+newCommentDiv.className = 'post-comment'
     const p = document.createElement('p')
     p.textContent = commentInput.value;
     p.className = 'user-comment'
